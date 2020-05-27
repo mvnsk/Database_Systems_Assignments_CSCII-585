@@ -1,0 +1,34 @@
+ORACLE
+
+Create table candidates 
+(Instructor VARCHAR2(20) NOT NULL,  
+Subject VARCHAR2(20) NOT NULL,  
+PRIMARY KEY (Instructor, Subject));
+
+Insert into candidates Values('Aleph','Scratch');
+Insert into candidates Values('Aleph','Java');
+Insert into candidates Values('Aleph','Processing');
+Insert into candidates Values('Bit', 'Python');
+Insert into candidates Values('Bit', 'JavaScript');
+Insert into candidates Values('Bit', 'Java');
+Insert into candidates Values('CRC', 'Python');
+Insert into candidates Values('CRC', 'JavaScript');
+Insert into candidates Values('Dat', 'Scratch');
+Insert into candidates Values('Dat', 'Python');
+Insert into candidates Values('Dat', 'JavaScript');
+Insert into candidates Values('Emscr','Scratch');
+Insert into candidates Values('Emscr','Processing');
+Insert into candidates Values('Emscr','JavaScript');
+Insert into candidates Values('Emscr', 'Python');
+
+select distinct instructor from candidates c1 where  
+3 = ( 
+select count(*)  from candidates c2 where c1.instructor=c2.instructor and c2.subject in ('JavaScript','Scratch','Python') 
+group by instructor);
+
+
+SELECT instructor
+FROM candidates
+WHERE subject IN ('JavaScript','Scratch','Python')
+GROUP BY instructor
+HAVING COUNT(*) = 3;

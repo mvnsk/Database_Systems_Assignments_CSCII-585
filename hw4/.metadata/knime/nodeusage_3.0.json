@@ -1,0 +1,47 @@
+
+{
+    "version": "4.1.2.v202003050920",
+    "created": "2020-04-15 17:38",
+    "nodestats": {
+        "nodes": [
+            {
+                "id": "org.knime.base.node.io.arffreader.ARFFReaderNodeFactory#ARFF Reader",
+                "nrexecs": 1,
+                "nrfails": 0,
+                "exectime": 3892,
+                "nrcreated": 4,
+                "successor": "org.knime.base.node.mine.decisiontree2.learner2.DecisionTreeLearnerNodeFactory3#Decision Tree Learner"
+            },
+            {
+                "id": "org.knime.base.node.mine.regression.linear2.learner.LinReg2LearnerNodeFactory2#Linear Regression Learner",
+                "nrexecs": 3,
+                "nrfails": 0,
+                "exectime": 54443,
+                "nrcreated": 2,
+                "successor": "n/a"
+            },
+            {
+                "id": "org.knime.base.node.mine.decisiontree2.learner2.DecisionTreeLearnerNodeFactory3#Decision Tree Learner",
+                "nrexecs": 2,
+                "nrfails": 0,
+                "exectime": 900,
+                "nrcreated": 2,
+                "successor": "n/a"
+            }
+        ],
+        "metaNodes": {
+        },
+        "wrappedNodes": {
+        }
+    },
+    "uptime": 2285476,
+    "workflowsOpened": 4,
+    "remoteWorkflowsOpened": 0,
+    "workflowsImported": 0,
+    "workflowsExported": 0,
+    "launches": 3,
+    "lastApplicationID": "org.knime.product.KNIME_APPLICATION",
+    "timeSinceLastStart": 3241714,
+    "crashes": 0,
+    "properlyShutDown": true
+}

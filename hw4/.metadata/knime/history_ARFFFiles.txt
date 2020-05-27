@@ -1,0 +1,3 @@
+C:\Users\Karthik\Desktop\CSCI585\hw4\shells.txt
+C:\Users\Karthik\Desktop\shells
+C:\Users\Karthik\Desktop\CSCI585\hw4\shells.arff.txt

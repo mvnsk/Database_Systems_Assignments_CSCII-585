@@ -1,0 +1,27 @@
+Create table subjects 
+(Languages VARCHAR2(20) NOT NULL,   
+   
+PRIMARY KEY (Languages));
+Insert into subjects Values('JavaScript');
+Insert into subjects Values('Scratch');
+Insert into subjects Values('Python');
+
+
+
+select distinct instructor from candidates c1 where  
+(select count(*) from subjects) = ( 
+select count(*)  from candidates c2 where c1.instructor=c2.instructor and c2.subject in (select languages from subjects)
+group by instructor);
+
+SELECT instructor
+FROM candidates
+WHERE subject IN (select languages from subjects)
+GROUP BY instructor
+HAVING COUNT(*) = (select count(*) from subjects);
+
+
+SELECT instructor
+FROM candidates
+WHERE subject IN ('JavaScript','Scratch','Python')
+GROUP BY instructor
+HAVING COUNT(*) = 3;
